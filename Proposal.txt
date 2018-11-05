@@ -1,0 +1,26 @@
+Online Arcade
+
+Three games 
+.Snake
+.PacMan
+.Frogger
+
+
+Online subscription
+.Subs
+
+Login
+.Login
+
+Listen to music
+.Music
+
+Video
+.Video
+
+Googles it for you
+.Google
+
+News feed
+.News
+

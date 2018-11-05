@@ -17,7 +17,7 @@
     color:red;
 }
 .Division {
-        background-color:aquamarine;
+    background-image: url(https://s3.amazonaws.com/spoonflower/public/design_thumbnails/0467/0850/pattern_bones_on_halloween_black-01_shop_preview.png);
 }
 body {
     background-color: honeydew;
@@ -39,6 +39,8 @@ ul {
     background-color: lightseagreen;
     position: fixed;
     width: 98%;
+    border:solid;
+    visibility:visible;
 }
 
 li {
