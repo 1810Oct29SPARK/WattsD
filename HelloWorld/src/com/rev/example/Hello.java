@@ -32,10 +32,13 @@ public class Hello {
 		num.add(1, 4);
 
 		System.out.println(num);
-		state = State.none;
+		state = State.hide;
 		System.out.println(state);
+		System.out.println("");
 		ForLoop();
+		System.out.println("");
 		WhileLoop();
+		System.out.println("");
 		SwitchCases();
 	}
 
@@ -63,28 +66,28 @@ public class Hello {
 	}
 
 	static void SwitchCases() {
-		String day = "Tuesday";
+		Practicenum day = Practicenum.Sunday;
 
 		switch (day) {
-		case "Sunday":
+		case Sunday:
 			System.out.println("Today is Sunday");
 			break;
-		case "Monday":
+		case Monday:
 			System.out.println("Today is Monday");
 			break;
-		case "Tuesday":
+		case Tuesday:
 			System.out.println("Today is Tuesday");
 			break;
-		case "Wedsday":
+		case Wednsday:
 			System.out.println("Today is Wedsday");
 			break;
-		case "Thursday":
+		case Thursday:
 			System.out.println("Today is Thursday");
 			break;
-		case "Friday":
+		case Friday:
 			System.out.println("Today is Friday");
 			break;
-		case "Saturday":
+		case Saturday:
 			System.out.println("Today is Saturday");
 			break;
 		default:

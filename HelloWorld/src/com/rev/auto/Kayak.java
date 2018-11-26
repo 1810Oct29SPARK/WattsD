@@ -1,6 +1,6 @@
 package com.rev.auto;
 
-public class Kayak extends Boat {
+public class Kayak extends Boat{
 
 	public Kayak(Color color, double hullSize, int numSeats, double paddleLength, Fuel fuel) {
 		super(color, hullSize, fuel);
@@ -8,10 +8,12 @@ public class Kayak extends Boat {
 		this.paddleLength = paddleLength;
 		this.setColor(color);
 		this.setHullSize(hullSize);
+		
 	}
 
 	public Kayak(Color color, double hullSize, Fuel fuel) {
 		super(color, hullSize, fuel);
+		System.out.println("Kayak three args");
 	}
 
 	public Kayak() {
@@ -36,5 +38,9 @@ public class Kayak extends Boat {
 	public String toString() {
 		return "Kayak [numSeats=" + numSeats + ", paddleLength=" + paddleLength + ", Color=" + color +", Fuel= "+ fuel + "]";
 	}
-
+	@Override
+	public int move()
+	{
+		return Speed = 13;
+	}
 }

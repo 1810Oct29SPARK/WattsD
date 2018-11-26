@@ -22,8 +22,8 @@ public class Car extends Vehicle {
 	private double milesSinceOilChange;
 
 	@Override
-	public void move() {
-		System.out.println("Car is Moving");
+	public int move() {
+		return Speed = 39;
 	}
 
 	public double getMilesSinceOilChange() {
@@ -62,5 +62,17 @@ public class Car extends Vehicle {
 	public String toString() {
 		return "Car [yearMan=" + yearMan + ", model=" + model + ", make=" + make + ", milesSinceOilChange="
 				+ milesSinceOilChange + "]";
+	}
+
+	@Override
+	public void turnRight() {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void turnLeft() {
+		// TODO Auto-generated method stub
+		
 	}
 }

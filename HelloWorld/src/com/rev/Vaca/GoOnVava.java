@@ -2,11 +2,14 @@ package com.rev.Vaca;
 
 import com.rev.auto.Car;
 import com.rev.auto.Kayak;
-import com.rev.auto.Vehicle.Color;
-import com.rev.auto.Vehicle.Fuel;
+import com.rev.auto.Motercycle;
+import com.rev.auto.Vehicle;
+import com.rev.auto.Vehicle.*;
 import com.rev.example.Hello;
+import java.io.*;
 
-public class GoOnVava {
+public class GoOnVava implements Serializable{
+	private static final long serialVersionUID = -6212017074406191463L;
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
@@ -22,7 +25,17 @@ public class GoOnVava {
 			System.out.println("Your good");
 		}
 		System.out.println("Made it to miami, lets go Kayaking");
-		Kayak k = new Kayak(Color.Blue,4.2,2,2,Fuel.Human_Suffering);
+		Kayak k = new Kayak(Color.Blue, 4.2, 2, 2, Fuel.Human_Suffering);
 		System.out.println(k);
+		System.out.println("Moving at " + k.move() + " miles per hour");
+	}
+	static Vehicle chooseAVehicle(Vehicle[] garage) {
+		Vehicle choice = null;
+		Vehicle[] vehicles = {new Kayak(Color.Red,4.2,3,6,Fuel.Hopes_Dreams), new Car(2012, "SpaceShip", "Tesla",50), new Motercycle(Color.Blue, Fuel.Human_Suffering)};
+		for(int i = 0;i<garage.length; i++)
+		{
+			
+		}
+		return choice;
 	}
 }
