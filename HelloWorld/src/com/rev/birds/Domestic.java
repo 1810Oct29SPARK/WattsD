@@ -9,19 +9,19 @@ public abstract class Domestic implements Bird {
 	@Override
 	public void Eat() {
 		// TODO Auto-generated method stub
-
+		System.out.println("Seeds");
 	}
 
 	@Override
 	public void Feathers() {
 		// TODO Auto-generated method stub
-
+		System.out.println("Basic feathers");
 	}
 
 	@Override
 	public void Eggs() {
 		// TODO Auto-generated method stub
-
+		System.out.println("Your Eggs are lame and you should feel lame");
 	}
 	abstract void Fly();
 }

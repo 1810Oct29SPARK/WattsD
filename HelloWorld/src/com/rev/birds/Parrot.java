@@ -4,11 +4,14 @@ public class Parrot extends Domestic {
 
 	public Parrot() {
 		// TODO Auto-generated constructor stub
+		super();
+		String className = this.getClass().getSimpleName();
+		System.out.println(className);
 	}
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-
+		new Parrot();
 	}
 
 	@Override
@@ -20,7 +23,7 @@ public class Parrot extends Domestic {
 	@Override
 	public void Feathers() {
 		// TODO Auto-generated method stub
-		super.Feathers();
+		System.out.println("Rainbow feathers");
 	}
 
 	@Override
@@ -32,7 +35,7 @@ public class Parrot extends Domestic {
 	@Override
 	void Fly() {
 		// TODO Auto-generated method stub
-		
+		System.out.println("I believe it can fly");
 	}
 
 }

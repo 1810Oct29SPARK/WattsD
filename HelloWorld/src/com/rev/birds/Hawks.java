@@ -5,7 +5,10 @@ public class Hawks extends BirdsofPrey {
 	public Hawks() {
 		// TODO Auto-generated constructor stub
 	}
-
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		new Hawks();
+	}
 	@Override
 	public void Eat() {
 		// TODO Auto-generated method stub
@@ -15,7 +18,7 @@ public class Hawks extends BirdsofPrey {
 	@Override
 	public void Feathers() {
 		// TODO Auto-generated method stub
-		super.Feathers();
+		System.out.println("Grey");
 	}
 
 	@Override
@@ -27,7 +30,7 @@ public class Hawks extends BirdsofPrey {
 	@Override
 	void Fly() {
 		// TODO Auto-generated method stub
-		
+		System.out.println("Not Floating Flying");
 	}
 
 }
