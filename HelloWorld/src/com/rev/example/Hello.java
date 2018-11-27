@@ -2,8 +2,8 @@ package com.rev.example;
 
 import java.util.*;
 
-public class Hello {
-
+public class Hello{
+	
 	public static Hello _instance = new Hello();
 
 	private Hello() {
@@ -25,7 +25,7 @@ public class Hello {
 
 		String s = "5";
 		Double d = Double.parseDouble(s);
-		System.out.println(d.getClass());
+		System.out.println(d);
 		// fizzBuzz this\
 		List<Integer> num = new ArrayList<Integer>();
 		num.add(0, 2);
@@ -95,4 +95,27 @@ public class Hello {
 			break;
 		}
 	}
-}
+	interface into
+	{
+		void fight();
+		void defend();
+	}
+	abstract class abs{
+		
+	}
+	class Classy implements into{
+
+		@Override
+		public void fight() {
+			// TODO Auto-generated method stub
+			
+		}
+
+		@Override
+		public void defend() {
+			// TODO Auto-generated method stub
+			
+		}
+		
+	}
+	}

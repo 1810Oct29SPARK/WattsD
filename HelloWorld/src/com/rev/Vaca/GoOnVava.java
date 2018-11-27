@@ -2,8 +2,6 @@ package com.rev.Vaca;
 
 import com.rev.auto.Car;
 import com.rev.auto.Kayak;
-import com.rev.auto.Motercycle;
-import com.rev.auto.Vehicle;
 import com.rev.auto.Vehicle.*;
 import com.rev.example.Hello;
 import java.io.*;
@@ -29,13 +27,13 @@ public class GoOnVava implements Serializable{
 		System.out.println(k);
 		System.out.println("Moving at " + k.move() + " miles per hour");
 	}
-	static Vehicle chooseAVehicle(Vehicle[] garage) {
+	/*static Vehicle chooseAVehicle(Vehicle[] garage) {
 		Vehicle choice = null;
-		Vehicle[] vehicles = {new Kayak(Color.Red,4.2,3,6,Fuel.Hopes_Dreams), new Car(2012, "SpaceShip", "Tesla",50), new Motercycle(Color.Blue, Fuel.Human_Suffering)};
+		//Vehicle[] vehicles = {new Kayak(Color.Red,4.2,3,6,Fuel.Hopes_Dreams), new Car(2012, "SpaceShip", "Tesla",50), new Motercycle(Color.Blue, Fuel.Human_Suffering)};
 		for(int i = 0;i<garage.length; i++)
 		{
 			
 		}
 		return choice;
-	}
+	}*/
 }
