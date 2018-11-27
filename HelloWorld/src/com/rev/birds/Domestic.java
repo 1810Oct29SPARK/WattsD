@@ -3,7 +3,7 @@ package com.rev.birds;
 public abstract class Domestic implements Bird {
 
 	public Domestic() {
-		// TODO Auto-generated constructor stub
+		 
 		Eat();
 		Feathers();
 		Eggs();
@@ -12,20 +12,20 @@ public abstract class Domestic implements Bird {
 
 	@Override
 	public void Eat() {
-		// TODO Auto-generated method stub
-		System.out.println("Seeds");
+		 
+		System.out.println("Diet: Seeds");
 	}
 
 	@Override
 	public void Feathers() {
-		// TODO Auto-generated method stub
-		System.out.println("Basic feathers");
+		 
+		System.out.println("Feathers: Basic feathers");
 	}
 
 	@Override
 	public void Eggs() {
-		// TODO Auto-generated method stub
-		System.out.println("Your Eggs are lame and you should feel lame");
+		 
+		System.out.println("Egg Size: Medium Eggs");
 	}
 	abstract void Fly();
 }

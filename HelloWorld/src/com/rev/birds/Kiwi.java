@@ -1,8 +1,8 @@
 package com.rev.birds;
 
-public class Parrot extends Domestic {
+public class Kiwi extends Flightless {
 
-	public Parrot() {
+	public Kiwi() {
 		 
 		super();
 		String className = this.getClass().getSimpleName();
@@ -11,31 +11,29 @@ public class Parrot extends Domestic {
 
 	public static void main(String[] args) {
 		 
-		new Parrot();
+		new Kiwi();
 	}
-
 	@Override
 	public void Eat() {
 		 
-		super.Eat();
+		System.out.println("Diet: Bugs");
 	}
 
 	@Override
 	public void Feathers() {
 		 
-		System.out.println("Feather: Rainbow feathers");
+		System.out.println("Feathers: Brown/Cocunut");
 	}
 
 	@Override
 	public void Eggs() {
 		 
-		super.Eggs();
+		System.out.println("Egg Size: Big eggs");
 	}
 
 	@Override
-	void Fly() {
+	void Move() {
 		 
-		System.out.println("Move Type: I believe it can fly");
+		System.out.println("Move Type: Walks");
 	}
-
 }
