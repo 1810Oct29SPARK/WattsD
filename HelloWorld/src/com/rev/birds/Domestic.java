@@ -4,6 +4,10 @@ public abstract class Domestic implements Bird {
 
 	public Domestic() {
 		// TODO Auto-generated constructor stub
+		Eat();
+		Feathers();
+		Eggs();
+		Fly();
 	}
 
 	@Override

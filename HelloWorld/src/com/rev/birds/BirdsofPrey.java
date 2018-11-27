@@ -4,6 +4,10 @@ public abstract class BirdsofPrey implements Bird {
 
 	public BirdsofPrey() {
 		// TODO Auto-generated constructor stub
+		Eat();
+		Feathers();
+		Eggs();
+		Fly();
 	}
 
 	@Override

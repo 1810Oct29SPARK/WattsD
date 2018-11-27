@@ -4,6 +4,9 @@ public class Hawks extends BirdsofPrey {
 
 	public Hawks() {
 		// TODO Auto-generated constructor stub
+		super();
+		String className = this.getClass().getSimpleName();
+		System.out.println(className);
 	}
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
