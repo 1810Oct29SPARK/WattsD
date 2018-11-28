@@ -63,7 +63,16 @@ public class MakinATemplate {
 			//new instance of Kayak
 			try {
 				Kayak k = (Kayak) clazz.newInstance();
-			} catch (InstantiationException e) {
+				Field numSeats = clazz.getDeclaredField("numSeats");
+				numSeats.setAccessible(true);
+				numSeats.set(k, 5);
+				System.out.println(k);
+			}
+			catch (NoSuchFieldException | SecurityException e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}
+			 catch (InstantiationException e) {
 				e.printStackTrace();
 			} catch (IllegalAccessException e) {
 				e.printStackTrace();
@@ -73,5 +82,7 @@ public class MakinATemplate {
 		}
 	}
 }
+
+
 
 	
