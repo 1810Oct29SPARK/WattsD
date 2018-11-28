@@ -21,7 +21,7 @@ public class CollectionTreeSet {
 		
 		System.out.println(trees);
 		System.out.println(trees.size());
-		list = (List<String>) trees.clone();
+		list = trees.clone().getClass();
 		trees.add(null);
 		System.out.println(trees);
 	}
