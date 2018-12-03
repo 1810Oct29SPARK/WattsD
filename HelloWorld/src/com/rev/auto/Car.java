@@ -1,6 +1,13 @@
 package com.rev.auto;
 
-public class Car extends Vehicle {
+import java.io.Serializable;
+
+public class Car extends Vehicle implements Steering, Comparable<Car>, Serializable {
+
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
 
 	public Car(int yearMan, String model, String make, double milesSinceOilChange) {
 		super();
@@ -19,7 +26,7 @@ public class Car extends Vehicle {
 	private int yearMan;
 	private String model;
 	public String make;
-	private double milesSinceOilChange;
+	private transient double milesSinceOilChange;
 
 	@Override
 	public int move() {
@@ -75,4 +82,11 @@ public class Car extends Vehicle {
 		// TODO Auto-generated method stub
 		
 	}
+
+	@Override
+	public int compareTo(Car o) {
+		// TODO Auto-generated method stub
+		return this.model.compareTo(o.getModel())+(this.yearMan-o.getYearMan());
+	}
+
 }

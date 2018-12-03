@@ -2,6 +2,11 @@ package com.rev.Exceptions;
 
 public class ExceptMatinance extends Exception {
 
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+
 	public ExceptMatinance() {
 		// TODO Auto-generated constructor stub
 	}
