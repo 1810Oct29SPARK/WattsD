@@ -1,0 +1,11 @@
+Sql stuff
+
+
+We are making some bears. Big fuzzy bears.
+Create Table Bear(
+Bear_ID Integer
+Bear_Name
+Bear_BirthDate Date
+Bear_Weight Integer
+);
+Commit;

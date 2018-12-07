@@ -1,0 +1,10 @@
+public Fruit(){
+super(); //Super Class Constructor
+}
+//Define instance feild
+public Fruit(int numSeeds)
+{
+this();
+this.numSeeds = numSeeds;
+}
+private int numSeeds;

@@ -1,0 +1,44 @@
+Generics
+
+Using type as a parameter
+Write code that handle many types of objects or compile time Type saftey
+Adds stability to your code
+Reusability to your codes as well
+A place holder for Datatypes
+
+No Generics
+Explicit to cast because compiler will accept anything which the entity to be cast could be between exception 
+
+Collections FrameWork
+
+Iterable -> Collection -> List, 	Queue, 		Set, 		Dequeue
+			Array list	Priority Queue	Sorted Set	
+			Vector				Hash Set	
+			Linked list			Nav Set		
+							Linked Set	
+							Tree Set
+
+They are oreded and or indexed?
+What are three or four of their methods?
+General Description?
+Are they Synronsized aka threadsafe?
+Do they have populates/null?
+
+Map -> Hash map, Hash table, Sorted map, Tree Map
+
+Collections ->
+
+
+
+Tree Set can use: 
+1. add a new member of a specified type to any null member of the set
+2. addAll can add entire other collection to any null members of this set
+3. size returns the size of the set as an int
+4. clone Retruns a shallow copy of the set
+
+General Description:
+A Tree set uses a tree for 
+
+Look for import
+Go to maven projects look for pom
+

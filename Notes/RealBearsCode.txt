@@ -1,0 +1,123 @@
+//Real Bears Code
+Create Table Bear(
+Bear_ID Integer Primary Key,
+Bear_Name VarChar2(100),
+Bear_Birthday Date,
+Bear_Weight Integer Default 200
+);
+Commit;
+Alter Table Bear Add Bear_Type VarCar2(20);
+
+Drop Table Bear; --Scripts Often Begin with drop statements to avoid name clash
+
+Creat Tabel Bear(
+Bear_ID Integer Primary Key,
+Bear_Name Varchar(100),
+BirtheDate Date,
+Weight Number(6,2) Default 200.00,
+Bear_Type_ID Integer Not Null, -Will not be nullable foriegn key
+Cave_ID Integer --Will be nullable foriegn key
+);
+/
+Create Table Bear_Type(
+Bear_Type_ID Integer Primary Key,
+Bear_Type_Name VarChar2(100)
+);
+/
+Create Table Bee_Hive(
+Bee_Hive_ID Integer Primary Key,
+Pounds_Honey Number(5,2) Default 75.00
+);
+/
+Create Table Cave(
+Cave_ID Integer Primary Key,
+Cave_Name VarChar2(100),
+Max_Bears Integer Default 4
+);
+/
+Create Table Bear_Bee_hive(
+Bear_ID Integer,
+Bee_Hive_ID Integer,
+Primary Key (Bear_ID, Bee_Hive_ID)
+);
+Create Sequence SQ_Bear_PK
+Start with 1000
+Increment by 1;
+/
+Create Sequence SQ_Bear_Type_PK
+Start with 1000
+Increment by 1;
+/
+Create Sequence SQ_Cave_PK
+Start with 1000
+Increment by 1;
+/
+Create Sequence SQ_Beehive_PK
+Start with 1000
+Increment by 1;
+/
+Create Or Replace Trigger Tr_Insert_Bear
+Before Insert On Bear
+For Each Row
+Begin
+Select SQ_Bear_PK.NextVal Into : New.Bear_Id From Dual;
+End;
+/
+Create Or Replace Trigger Tr_Insert_Bear_Type
+Before Insert On Bear_Type
+For Each Row
+Begin
+Select SQ_Bear_Type_PK.NextVal Into : New.Bear_Type_Id From Dual;
+End;
+/
+Create Or Replace Trigger Tr_Insert_BeHive
+Before Insert On BeeHive
+For Each Row
+Begin
+Select SQ_BeeHive_PK.NextVal Into : New.BeeHive_Id From Dual;
+End;
+/
+Create Or Replace Trigger Tr_Insert_Cave
+Before Insert On Cave
+For Each Row
+Begin
+Select SQ_Cave_PK.NextVal Into : New.Cave_Id From Dual;
+End;
+
+Insert Into (Bear_Name, BirthDate, Bear_Type, Weight)
+Values('Bruce', To_Date('1999-04-1987', 'yyyy-mm-dd hh24 :mi : ss), 2, 900);
+
+Insert Into (Bear_Name, BirthDate, Bear_Type, Weight)
+Values('Betty', To_Date('1999-04-1987', 'yyyy-mm-dd hh24 :mi : ss), 1, 1000);
+
+Update Bear Set Cave_Id = 1
+Where Birthdate = '04-APR-99';
+
+Select * 
+From Bear B
+Left Join Cave On B.Cave_Id = Cave;
+
+Insert Into (Bear_Name, BirthDate, Bear_Type, Weight)
+Values('Wilfred', To_Date('1999-04-1987', 'yyyy-mm-dd hh24 :mi : ss), 2);
+
+Insert Cave(Cave_Name)
+Values('Philidelphia');
+
+
+Select * 
+From Bear B
+Right Join Cave On B.Cave_Id = Cave;
+
+
+Select * 
+From Bear B
+Full Join Cave On B.Cave_Id = Cave;
+
+Select B.BearName, B.Birthdate as Bearthdate, Cave.Cave_Name
+From Bear B
+Left Join Cave On B.Cave_ID = Cave.Cave_ID;
+
+Select Cave.Cave_Name
+Where AVG(B.BirthDate) < '6-DEC-1998'
+From Bear B
+Rigth Join Cave B.Vave_ID Cave.Cave_ID;

@@ -1,0 +1,43 @@
+//Psuedo Code
+Bears ARE
+
+Bears
+Bear_ID
+
+Bear_Name
+
+Bear_Birthday Date
+
+Bear_Weight
+
+Cave ID FK
+
+Behive ID FK
+
+TypeID FK
+
+
+Types
+Bear_Type PK
+
+Type_Name
+
+
+Caves
+CaveID PK
+
+Cave_Name
+
+Cave_Space
+
+
+Behive
+HiveID PK
+
+Pounds_of_Honey
+
+
+Bear Hive
+BearID FK
+//Composite Pk key
+HiveID FK

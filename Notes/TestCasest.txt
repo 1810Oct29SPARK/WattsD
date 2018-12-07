@@ -1,0 +1,50 @@
+import asserttrue
+import before
+import test
+
+public calculatortest{
+
+private Calculator c;
+
+@before
+public void setCalculator()
+{
+this.c = new Calculator;
+}
+
+
+@test
+public void emptyStringReturnsZero()
+{
+	assertEquals(0,c.add(""),001);
+}
+
+@Test
+public void twoNumbersReturnsSum(){
+	assertEquals(28.2,c,add("12.9,15.3"),001);
+}
+@Test
+public void nullReturnZero()
+{
+	assertEquals(0,c.(null),001);
+}
+@Test
+public void 
+
+public Calculator{
+
+ public Calculator(){}
+
+ public Double add(String toAdd){ 
+double sum = 0.0;
+if(!toAdd.equals("")
+{
+String[] numbers = toAdd.split(",");
+
+for(String number : numbers){
+sum += Double.parseDouble(number);
+}
+}
+ return sum;
+}
+}

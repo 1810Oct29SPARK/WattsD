@@ -1,0 +1,78 @@
+What is a String in Java?
+
+
+A String is a sequence of characters that can be used as an Object.
+
+How to create a String?
+
+Reference the class by using String then name of the reference
+
+What is a string literal?
+A String literal is a characters that can be used to populate an object or display text
+
+
+What is the string pool?
+
+An area in Heap memorey that stores string
+
+Is a String mutable? 
+No. Strings are a final class
+
+What does that mean?
+Because it cannot have fields changed
+
+
+Research and implement 8 methods in the String API. 
+
+
+class multiDimensional
+{
+   
+public static void main(String args[])
+   
+{
+       // declaring and initializing 2D array
+       
+int arr[][] = { {2,7,9},{3,6,1},{7,4,2} };
+
+       
+// printing 2D array
+       
+for (int i=0; i< 3 ; i++)
+       
+{
+           
+for (int j=0; j < 3 ; j++)
+               
+System.out.print(arr[i][j] + " ");
+
+           
+System.out.println();
+       
+}
+   
+}
+
+}
+
+only one copy of each string literal
+String Builder
+Not thread safe
+Mutanble sequence of characters
+
+String Buffer
+Mutable sequence of characters
+Threadsafe
+
+Only one thread safe at a time if it is thread safe.
+String
+Not thread safe
+Imutable
+
+
+=========================================================================
++
+Arrays
++
+=========================================================================
+

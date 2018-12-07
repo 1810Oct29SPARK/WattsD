@@ -1,0 +1,35 @@
+Throwable
+
+Errors:
+Dont explicitly handle just avoid them.
+Stack overflow error
+out of memorey
+
+Exception:
+Checked Exceptions
+Handle/Anticipate
+At Complile time
+JO Exception
+SQL Exception
+
+Runtime Exception:
+Unchecked Exceptions
+Not anticpated by compiler
+Null pointer Exceptions
+Array index out of bounds exception
+Usually reults of sloppy programming
+
+Exception and errors:
+Things that go wrong
+Weve seen syntax errors at compile time
+
+Playing with key word throws.
+
+Exception Handline
+try catch finally throws (Key Words)
+
+An Exception is Throwing when something goes wrong
+What to do?
+
+Need try block and at least 1 catch block or finally block for this to compile
+Multiple catch Blocks are ok
