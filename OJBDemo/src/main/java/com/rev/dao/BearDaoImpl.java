@@ -24,13 +24,7 @@ public class BearDaoImpl implements BearDao {
 	public List<Bear> getBears() {
 		
 		List<Bear> bl = new ArrayList<>();
-		try(Connection con = ConnectionUtil.getConnection(filename)){
-			
-		} catch (SQLException e) {
-			e.printStackTrace();
-		} catch (IOException e) {
-			e.printStackTrace();
-		}
+		try(Connection con = ConnectionUtil.getConnection(filename)){	
 		String sql = "SELECT B.BEAR_ID, B.BEAR_NAME, B.WEIGHT, B.BIRTHDATE, C.CAVE_ID, C.CAVE_NAME, C.MAX_BEARS, BT.BEAR_TYPE_ID, BT.BEAR_TYPE_NAME\r\n" + 
 				"FROM BEAR B\r\n" + 
 				"INNER JOIN BEAR_TYPE BT\r\n" + 
@@ -52,6 +46,11 @@ public class BearDaoImpl implements BearDao {
 			String bearTypeName = rs.getString("BEAR_NAME");
 			bl.add(new Bear(bearId,bearName, new Cave(caveId,caveName,maxBears),new BearType(bearTypeId,bearTypeName),weight,birthDate));			
 		}
+		} catch (SQLException e) {
+			e.printStackTrace();
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
 		return bl;
 	}
 
@@ -60,11 +59,7 @@ public class BearDaoImpl implements BearDao {
 		Bear b = null;
 		try(Connection con = ConnectionUtil.getConnection(filename)){
 			
-		} catch (SQLException e) {
-			e.printStackTrace();
-		} catch (IOException e) {
-			e.printStackTrace();
-		}
+		
 		String sql = "SELECT B.BEAR_ID, B.BEAR_NAME, B.WEIGHT, B.BIRTHDATE, C.CAVE_ID, C.CAVE_NAME, C.MAX_BEARS, BT.BEAR_TYPE_ID, BT.BEAR_TYPE_NAME\r\n" + 
 				"FROM BEAR B\r\n" + 
 				"INNER JOIN BEAR_TYPE BT\r\n" + 
@@ -72,9 +67,9 @@ public class BearDaoImpl implements BearDao {
 				"INNER JOIN CAVE C\r\n" + 
 				"ON B.CAVE_ID = C.CAVE_ID\r\n" + 
 				"WEHRE B.BEAR_ID = ? " +
-				"ORDER BY B.BEAR_ID;";
+				"ORDER BY B.BEAR_ID";
 		PreparedStatement pstmt = con.prepareStatement(sql);
-		pstmt.sentInt(1,id);
+		//pstmt.sentInt(1,id);
 		ResultSet rs = pstmt.executeQuery();
 		while(rs.next()) {
 			int bearId = rs.getInt("BEAR_ID");
@@ -86,8 +81,13 @@ public class BearDaoImpl implements BearDao {
 			int maxBears = rs.getInt("BEAR_ID");
 			int bearTypeId = rs.getInt("BEAR_ID");
 			String bearTypeName = rs.getString("BEAR_NAME");
-			b = new Bear(new Bear(bearId,bearName, new Cave(caveId,caveName,maxBears),new BearType(bearTypeId,bearTypeName),weight,birthDate));
+			//b = new Bear(new Bear(bearId,bearName, new Cave(caveId,caveName,maxBears),new BearType(bearTypeId,bearTypeName),weight,birthDate));
 			}
+		} catch (SQLException e) {
+			e.printStackTrace();
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
 		return b;
 	}
 

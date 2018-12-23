@@ -18,7 +18,7 @@ public class Driver {
 		//List<Bear> bears = bd.getBears();
 		//for(Bear b : bears) {
 			System.out.println(bd.getBearById(72));
-			System.out.println(bd.feedBear(72,2,10));
+			//System.out.println(bd.feedBear(72,2,10));
 		//}
 	}
 	
