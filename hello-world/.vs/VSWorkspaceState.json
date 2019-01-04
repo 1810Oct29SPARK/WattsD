@@ -2,10 +2,13 @@
   "ExpandedNodes": [
     "",
     "\\e2e",
+    "\\e2e\\src",
     "\\src",
     "\\src\\app",
-    "\\src\\app\\bear"
+    "\\src\\app\\bear",
+    "\\src\\app\\models",
+    "\\src\\app\\services"
   ],
-  "SelectedNode": "\\src\\index.html",
+  "SelectedNode": "\\src\\app\\bear\\bear.component.html",
   "PreviewInSolutionExplorer": false
 }

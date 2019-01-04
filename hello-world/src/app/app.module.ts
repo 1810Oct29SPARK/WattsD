@@ -1,18 +1,20 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
-import { AppComponent } from './app.component';
 import { BearComponent } from './bear/bear.component';
+import { BearService } from './services/bear.sevice';
+import { DogComponent } from './dog/dog.component';
+import {HttpClientModule} from '@angular/http';
 
 @NgModule({
   declarations: [
-    AppComponent,
-    BearComponent
+    BearComponent,
+    DogComponent
   ],
   imports: [
     BrowserModule
   ],
-  providers: [],
-  bootstrap: [AppComponent]
+  providers: [BearService],
+  bootstrap: [BearComponent]
 })
 export class AppModule { }
